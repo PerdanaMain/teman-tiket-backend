@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "root",
+    "password": "firman2307",
+    "database": "tt_dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "DUnMS82ck8hbnl81cVt2",
+    "database": "railway",
+    "host": "containers-us-west-82.railway.app",
+    "dialect": "mysql",
+    "port": "6787"
+  }
+}
