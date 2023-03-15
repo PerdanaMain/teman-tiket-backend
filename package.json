@@ -7,17 +7,28 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "db:create": "npx sequelize db:create",
+    "model-users": "npx sequelize-cli model:generate --name users --attributes role_id:integer,first_name:string,last_name:string,birthdate:string,gender:string,phone:string,email:string,password:string,access_token:text,refresh_token:text,photo:string",
+    "model-roles": "npx sequelize-cli model:generate --name roles --attributes role_name:string",
+    "seed:roles": "npx sequelize-cli seed:generate --name demo-role",
+    "seed:users": "npx sequelize-cli seed:generate --name demo-user",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:undo": "npx sequelize-cli db:migrate:undo:all",
+    "db:drop": "npx sequelize-cli db:drop"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
     "mysql2": "^3.2.0",
     "sequelize": "^6.29.3",
     "sequelize-cli": "^6.6.0"
